@@ -4,16 +4,18 @@
 #
 Name     : R-pmml
 Version  : 2.0.0
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/pmml_2.0.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pmml_2.0.0.tar.gz
 Summary  : Generate PMML for Various Models
 Group    : Development/Tools
 License  : GPL-3.0
 Requires: R-XML
-Requires: R-evaluate
+Requires: R-stringr
 BuildRequires : R-XML
 BuildRequires : R-evaluate
+BuildRequires : R-stringi
+BuildRequires : R-stringr
 BuildRequires : buildreq-R
 
 %description
@@ -26,13 +28,13 @@ BuildRequires : buildreq-R
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559579299
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562446292
 
 %install
-export SOURCE_DATE_EPOCH=1559579299
+export SOURCE_DATE_EPOCH=1562446292
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -61,7 +63,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
