@@ -4,7 +4,7 @@
 #
 Name     : R-pmml
 Version  : 2.1.0
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/pmml_2.1.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pmml_2.1.0.tar.gz
 Summary  : Generate PMML for Various Models
@@ -15,6 +15,7 @@ Requires: R-stringr
 BuildRequires : R-XML
 BuildRequires : R-stringr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 # pmml <a href='https://CRAN.R-project.org/package=pmml'><img src='man/figures/logo3.png' align="right" height="139" /></a>
@@ -27,10 +28,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568384759
+export SOURCE_DATE_EPOCH=1571875779
 
 %install
-export SOURCE_DATE_EPOCH=1568384759
+export SOURCE_DATE_EPOCH=1571875779
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
