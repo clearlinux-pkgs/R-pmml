@@ -1,2 +1,12 @@
 # This file contains build requirements that get picked up but are
 # undesirable. One entry per line, no whitespace.
+R-caret
+R-clue
+R-data.table
+R-e1071
+R-forecast
+R-glmnet
+R-kernlab
+R-neighbr
+R-randomForest
+R-xgboost
