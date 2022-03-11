@@ -4,7 +4,7 @@
 #
 Name     : R-pmml
 Version  : 2.5.1
-Release  : 51
+Release  : 52
 URL      : https://cran.r-project.org/src/contrib/pmml_2.5.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/pmml_2.5.1.tar.gz
 Summary  : Generate PMML for Various Models
